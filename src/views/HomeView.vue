@@ -52,7 +52,7 @@ import { songsCollection } from "@/includes/firebase";
 import SongItem from "@/components/SongItem.vue";
 
 const songs = reactive([]);
-const maxPerPage = 3;
+const maxPerPage = 5;
 const pendingRequest = ref(false);
 
 onBeforeMount(async () => {
