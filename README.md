@@ -1,6 +1,6 @@
-# music-app
+<h1 align="center">WebPlayer</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="center">The WebPlayer is a cloud-based music storage platform that allows users to upload their music and access it anywhere, anytime, directly from the internet. With the ability to access a personal music library from anywhere with an internet connection, the WebPlayer is the perfect choice for music lovers on the go.</p>
 
 ## Recommended IDE Setup
 
@@ -55,4 +55,5 @@ npm run test:e2e
 ```sh
 npm run lint
 ```
-# music-app
+
+# WebPlayer
