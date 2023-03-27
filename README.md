@@ -2,7 +2,7 @@
 
 <h1 align="center">Web Music</h1>
 
-<p align="center">The WebPlayer is a cloud-based music storage platform that allows users to upload their music and access it anywhere, anytime, directly from the internet. With the ability to access a personal music library from anywhere with an internet connection, the Web Music is the perfect choice for music lovers on the go.</p>
+<p align="left">The WebPlayer is a cloud-based music storage platform that allows users to upload their music and access it anywhere, anytime, directly from the internet. With the ability to access a personal music library from anywhere with an internet connection, the Web Music is the perfect choice for music lovers on the go.</p>
 
 ## Technologies
 
