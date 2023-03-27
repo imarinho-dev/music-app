@@ -1,6 +1,18 @@
-<h1 align="center">WebPlayer</h1>
+# ![WebApp](screenshots/Music-App.png)
 
-<p align="center">The WebPlayer is a cloud-based music storage platform that allows users to upload their music and access it anywhere, anytime, directly from the internet. With the ability to access a personal music library from anywhere with an internet connection, the WebPlayer is the perfect choice for music lovers on the go.</p>
+<h1 align="center">Web Music</h1>
+
+<p align="center">The WebPlayer is a cloud-based music storage platform that allows users to upload their music and access it anywhere, anytime, directly from the internet. With the ability to access a personal music library from anywhere with an internet connection, the Web Music is the perfect choice for music lovers on the go.</p>
+
+## Technologies
+
+Project is created with:
+
+- Vue: 3.2.47
+- Pinia: 2.0.33
+- Vite: 4.1.4
+- Tailwindcss: 3.2.7
+- Firebase: 9.17.2
 
 ## Recommended IDE Setup
 
@@ -55,5 +67,3 @@ npm run test:e2e
 ```sh
 npm run lint
 ```
-
-# WebPlayer
