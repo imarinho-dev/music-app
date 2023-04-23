@@ -1,18 +1,19 @@
 <template>
-  <section class="container mx-auto mt-6">
+  <section class="container mx-auto mt-6 text-gray-700 dark:text-white">
     <div class="md:grid md:grid-cols-3 md:gap-4">
       <div class="col-span-1">
         <upload-file :addSong="addSong" />
       </div>
       <div class="col-span-2">
         <div
-          class="bg-white rounded border border-gray-200 relative flex flex-col"
+          class="relative flex flex-col bg-white border border-gray-200 rounded dark:bg-gray-600 dark:border-gray-500"
         >
-          <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
+          <div
+            class="flex items-center justify-between px-6 pt-6 pb-5 font-bold border-b border-gray-200 dark:border-gray-400"
+          >
             <span class="card-title">My Songs</span>
-            <i
-              class="fa fa-compact-disc float-right text-green-400 text-2xl"
-            ></i>
+
+            <Icon class="text-2xl text-green-400" icon="bi:disc-fill" />
           </div>
           <div class="p-6">
             <!-- Composition Items -->
@@ -38,6 +39,7 @@ import { onBeforeRouteLeave } from "vue-router";
 import { songsCollection, auth } from "@/includes/firebase";
 import UploadFile from "@/components/UploadFile.vue";
 import CompositionItem from "@/components/CompositionItem.vue";
+import { Icon } from "@iconify/vue";
 
 const songs = reactive([]);
 const unsavedFlag = ref(false);

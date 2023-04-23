@@ -53,7 +53,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  linkActiveClass: "text-yellow-500",
+  linkActiveClass: "text-yellow-400 dark:text-yellow-400",
 });
 
 router.beforeEach((to, from, next) => {

@@ -1,13 +1,18 @@
 <template>
-  <div class="bg-white rounded border border-gray-200 relative flex flex-col">
-    <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
+  <div
+    class="relative flex flex-col bg-white border border-gray-200 rounded dark:border-gray-400 dark:text-white dark:bg-gray-600"
+  >
+    <div
+      class="flex items-center justify-between px-6 pt-6 pb-5 font-bold border-b border-gray-200"
+    >
       <span class="card-title">Upload</span>
-      <i class="fas fa-upload float-right text-green-400 text-2xl"></i>
+
+      <Icon class="text-4xl text-green-400" icon="ic:sharp-cloud-upload" />
     </div>
     <div class="p-6">
       <!-- Upload Dropbox -->
       <div
-        class="w-full px-10 py-20 rounded text-center cursor-pointer border border-dashed border-gray-400 text-gray-400 transition duration-500 hover:text-white hover:bg-green-400 hover:border-green-400 hover:border-solid"
+        class="w-full px-10 py-20 text-center text-gray-400 transition duration-500 bg-white border border-gray-400 border-dashed rounded cursor-pointer hover:text-white hover:bg-green-400 hover:border-green-400 hover:border-solid"
         :class="{ 'bg-green-400 border-green-400 border-solid': is_dragOver }"
         @drag.prevent.stop=""
         @dragstart.prevent.stop=""
@@ -24,7 +29,7 @@
       <!-- Progess Bars -->
       <div class="mb-4" v-for="upload in uploads" :key="upload.name">
         <!-- File Name -->
-        <div class="font-bold text-sm" :class="upload.text_class">
+        <div class="text-sm font-bold" :class="upload.text_class">
           <i :class="upload.icon"></i> {{ upload.name }}
         </div>
         <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
@@ -43,6 +48,7 @@
 <script setup>
 import { ref, reactive, onBeforeUnmount } from "vue";
 import { storage, auth, songsCollection } from "@/includes/firebase";
+import { Icon } from "@iconify/vue";
 
 const is_dragOver = ref(false);
 const uploads = reactive([]);

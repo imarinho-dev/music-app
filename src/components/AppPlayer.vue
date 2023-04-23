@@ -1,26 +1,32 @@
 <template>
   <!-- Player -->
-  <div class="fixed bottom-0 left-0 bg-white px-4 py-2 w-full">
+  <div
+    class="fixed bottom-0 left-0 w-full px-4 py-2 bg-white border-t dark:border-gray-600 dark:bg-gray-700"
+  >
     <!-- Track Info -->
     <div class="text-center" v-if="current_song.modified_name">
-      <span class="song-title font-bold">{{ current_song.modified_name }}</span>
+      <span class="font-bold song-title">{{ current_song.modified_name }}</span>
       by
       <span class="song-artist">{{ current_song.display_name }}</span>
     </div>
-    <div class="flex flex-nowrap gap-4 items-center">
+    <div class="flex items-center gap-4 flex-nowrap">
       <!-- Play/Pause Button -->
       <button type="button" @click.prevent="toggleAudio" id="player-play-btn">
-        <i
-          class="fa text-gray-500 text-xl"
-          :class="{ 'fa-play': !playing, 'fa-pause': playing }"
-        ></i>
+        <Icon
+          class="text-4xl dark:text-white"
+          :icon="`${
+            playing
+              ? 'material-symbols:pause-circle-rounded'
+              : 'material-symbols:play-circle'
+          }`"
+        />
       </button>
       <!-- Current Position -->
       <div class="player-currenttime">{{ seek }}</div>
       <!-- Scrub Container  -->
       <div
         @click.prevent="updateSeek"
-        class="w-full h-2 rounded bg-gray-200 relative cursor-pointer"
+        class="relative w-full h-2 bg-gray-200 rounded cursor-pointer"
       >
         <!-- Player Ball -->
         <span
@@ -44,6 +50,7 @@
 <script setup>
 import { computed } from "vue";
 import { usePlayerStore } from "../stores/player";
+import { Icon } from "@iconify/vue";
 
 const store = usePlayerStore();
 const { toggleAudio, updateSeek } = usePlayerStore();

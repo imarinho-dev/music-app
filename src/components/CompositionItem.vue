@@ -1,23 +1,25 @@
 <template>
-  <div class="border border-gray-200 p-3 mb-4 rounded">
+  <div
+    class="p-3 mb-4 border border-gray-200 rounded dark:border-gray-400 dark:hover:bg-gray-500"
+  >
     <div v-show="!showForm">
       <h4 class="inline-block text-2xl font-bold">{{ song.modified_name }}</h4>
       <button
         @click.prevent="deleteSong"
-        class="ml-1 py-1 px-2 text-sm rounded text-white bg-red-600 float-right"
+        class="float-right px-2 py-1 ml-1 text-sm text-white bg-red-600 rounded"
       >
-        <i class="fa fa-times"></i>
+        <Icon class="text-xl" icon="pepicons-pop:times" />
       </button>
       <button
         @click.prevent="showForm = !showForm"
-        class="ml-1 py-1 px-2 text-sm rounded text-white bg-blue-600 float-right"
+        class="float-right px-2 py-1 ml-1 text-sm text-white bg-blue-600 rounded"
       >
-        <i class="fa fa-pencil-alt"></i>
+        <Icon class="text-xl" icon="ph:pencil-line-duotone" />
       </button>
     </div>
     <div v-show="showForm">
       <div
-        class="text-white text-center font-bold p-4 mb-4"
+        class="p-4 mb-4 font-bold text-center text-white"
         v-if="show_alert"
         :class="alert_variant"
       >
@@ -73,6 +75,7 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { songsCollection, storage } from "@/includes/firebase";
+import { Icon } from "@iconify/vue";
 
 const props = defineProps({
   song: {

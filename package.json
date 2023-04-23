@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@vee-validate/rules": "^4.8.4",
+    "@vueuse/core": "^9.13.0",
     "firebase": "^9.19.1",
     "howler": "^2.2.3",
     "nprogress": "^0.2.0",
@@ -24,6 +25,7 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitest/ui": "^0.30.0",
