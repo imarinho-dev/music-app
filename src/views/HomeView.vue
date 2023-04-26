@@ -3,7 +3,7 @@
     <!-- Introduction -->
     <section class="relative py-20 mb-8 text-center text-white">
       <div
-        class="absolute inset-0 w-full h-full bg-contain introduction-bg bg-[url('assets/img/user-header.png')] dark:bg-[url('assets/img/header.png')]"
+        class="absolute inset-0 w-full h-full bg-contain bg-hero-pattern introduction-bg dark:bg-dark-hero-pattern"
       ></div>
       <div class="container mx-auto">
         <div class="main-header-content">

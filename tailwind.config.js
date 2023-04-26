@@ -6,7 +6,12 @@ module.exports = {
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "hero-pattern": "url('/assets/img/user-header.png')",
+        "dark-hero-pattern": "url('/assets/img/header.png')",
+      },
+    },
   },
   plugins: [],
 };
