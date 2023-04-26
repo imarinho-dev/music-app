@@ -18,7 +18,7 @@
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Enter Email"
       />
-      <ErrorMessage name="email" class="text-red-600 pl-3" />
+      <ErrorMessage name="email" class="text-red-600 dark:text-red-100 pl-3" />
     </div>
     <!-- Password -->
     <div class="mb-3">
@@ -30,7 +30,10 @@
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Password"
       />
-      <ErrorMessage name="password" class="text-red-600 pl-3" />
+      <ErrorMessage
+        name="password"
+        class="text-red-600 pl-3 dark:text-red-100"
+      />
     </div>
     <button
       type="submit"

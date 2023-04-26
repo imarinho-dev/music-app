@@ -18,7 +18,7 @@
       >
 
       <div
-        class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        class="inline-block align-bottom bg-white dark:bg-gray-500 dark:text-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
       >
         <!-- Add margin if you want to see some of the overlay behind the modal-->
         <div class="py-4 text-left px-6">
@@ -30,7 +30,7 @@
               class="modal-close cursor-pointer z-50"
               @click="modalVisibility = false"
             >
-              <i class="fas fa-times"></i>
+              <Icon class="text-2xl" icon="uil:times" />
             </div>
           </div>
 
@@ -41,7 +41,8 @@
                 class="block rounded py-3 px-4 transition"
                 :class="{
                   'hover:text-white text-white bg-blue-600': tab === 'login',
-                  'hover:text-blue-600': tab === 'register',
+                  'hover:text-blue-600 dark:hover:text-blue-400':
+                    tab === 'register',
                 }"
                 href="#"
                 @click.prevent="tab = 'login'"
@@ -55,7 +56,8 @@
                 @click.prevent="tab = 'register'"
                 :class="{
                   'hover:text-white text-white bg-blue-600': tab === 'register',
-                  'hover:text-blue-600': tab === 'login',
+                  'hover:text-blue-600 dark:hover:text-blue-400':
+                    tab === 'login',
                 }"
                 >Register</a
               >
@@ -75,6 +77,7 @@ import { storeToRefs } from "pinia";
 import { ref } from "vue";
 import LoginForm from "./LoginForm.vue";
 import RegisterForm from "./RegisterForm.vue";
+import { Icon } from "@iconify/vue";
 
 const modalStore = useModalStore();
 

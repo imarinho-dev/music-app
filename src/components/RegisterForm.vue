@@ -22,7 +22,7 @@
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Enter Name"
       />
-      <ErrorMessage class="text-red-600 pl-3" name="name" />
+      <ErrorMessage class="text-red-600 pl-3 dark:text-red-100" name="name" />
     </div>
     <!-- Email -->
     <div class="mb-3">
@@ -34,7 +34,7 @@
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Enter Email"
       />
-      <ErrorMessage class="text-red-600 pl-3" name="email" />
+      <ErrorMessage class="text-red-600 pl-3 dark:text-red-100" name="email" />
     </div>
     <!-- Age -->
     <div class="mb-3">
@@ -45,7 +45,7 @@
         type="number"
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
       />
-      <ErrorMessage class="text-red-600 pl-3" name="age" />
+      <ErrorMessage class="text-red-600 pl-3 dark:text-red-100" name="age" />
     </div>
     <!-- Password -->
     <div class="mb-3">
@@ -79,7 +79,10 @@
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Confirm Password"
       />
-      <ErrorMessage class="text-red-600 pl-3" name="confirm_password" />
+      <ErrorMessage
+        class="text-red-600 pl-3 dark:text-red-100"
+        name="confirm_password"
+      />
     </div>
     <!-- Country -->
     <div class="mb-3">
@@ -95,7 +98,10 @@
         <option value="Germany">Germany</option>
         <option value="Antarctica">Antarctica</option>
       </vee-field>
-      <ErrorMessage class="text-red-600 pl-3" name="country" />
+      <ErrorMessage
+        class="text-red-600 pl-3 dark:text-red-100"
+        name="country"
+      />
     </div>
     <!-- TOS -->
     <div class="mb-3 pl-6">
@@ -114,7 +120,7 @@
         class="block"
         ><a href="#">{{ $t("register.tos") }}</a></i18n-t
       >
-      <ErrorMessage class="text-red-600" name="tos" />
+      <ErrorMessage class="text-red-600 dark:text-red-100" name="tos" />
     </div>
     <button
       type="submit"
