@@ -8,7 +8,7 @@
   <app-player />
   <app-auth />
 </template>
-<script setup lang="ts">
+<script setup>
 import AppHeader from "@/components/AppHeader.vue";
 import AppAuth from "@/components/AppAuth.vue";
 import AppPlayer from "@/components/AppPlayer.vue";

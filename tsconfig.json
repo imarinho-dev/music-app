@@ -21,7 +21,7 @@
     "tests/**/*.ts",
     "tests/**/*.tsx",
     "src/stores/modal.js",
-    "src/main.js"
+    "src/main.ts"
   ],
   "exclude": ["node_modules"]
 }

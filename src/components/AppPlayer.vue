@@ -49,15 +49,15 @@
 
 <script setup>
 import { computed } from "vue";
-import { usePlayerStore } from "../stores/player";
+import { usePlayerStore } from "@/stores/player";
 import { Icon } from "@iconify/vue";
 
-const store = usePlayerStore();
-const { toggleAudio, updateSeek } = usePlayerStore();
+const playerStore = usePlayerStore();
+const { toggleAudio, updateSeek } = playerStore;
 
-const playing = computed(() => store.playing);
-const seek = computed(() => store.seek);
-const duration = computed(() => store.duration);
-const playerProgress = computed(() => store.playerProgress);
-const current_song = computed(() => store.current_song);
+const playing = computed(() => playerStore.playing);
+const seek = computed(() => playerStore.seek);
+const duration = computed(() => playerStore.duration);
+const playerProgress = computed(() => playerStore.playerProgress);
+const current_song = computed(() => playerStore.current_song);
 </script>

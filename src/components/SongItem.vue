@@ -20,8 +20,11 @@
         :to="{ name: 'song', params: { id: song.docID }, hash: '#comments' }"
         v-slot="{ navigate }"
       >
-        <span class="comments" @click="navigate">
-          <i class="text-gray-600 dark:text-gray-100 fa fa-comments"></i>
+        <span
+          class="comments flex justify-center items-center dark:text-gray-100 text-gray-600"
+          @click="navigate"
+        >
+          <Icon class="mr-2" icon="fa-solid:comments" />
           {{ song.comment_count }}
         </span>
       </router-link>
@@ -31,6 +34,7 @@
 
 <script setup>
 import { reactive } from "vue";
+import { Icon } from "@iconify/vue";
 
 const props = defineProps(["song"]);
 
