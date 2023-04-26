@@ -14,7 +14,7 @@
           class="z-50 h-24 w-24 bg-white text-black rounded-full focus:outline-none flex justify-center items-center"
         >
           <Icon
-            class="text-6xl dark:text-white"
+            class="text-6xl"
             :icon="`${
               playing
                 ? 'material-symbols:pause-rounded'
@@ -32,12 +32,17 @@
     <!-- Form -->
     <section class="container mx-auto mt-6" id="comments">
       <div
-        class="bg-white rounded border border-gray-200 relative flex flex-col"
+        class="bg-white dark:bg-gray-600 dark:text-white dark:border-gray-400 rounded border border-gray-200 relative flex flex-col"
       >
-        <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
+        <div
+          class="px-6 pt-6 pb-5 font-bold border-b border-gray-200 dark:border-gray-400"
+        >
           <!-- Comment Count -->
           <span class="card-title">Comments ({{ song.comment_count }})</span>
-          <i class="fa fa-comments float-right text-green-400 text-2xl"></i>
+          <Icon
+            class="float-right text-green-400 text-2xl"
+            icon="fa-solid:comments"
+          />
         </div>
         <div class="p-6">
           <div
@@ -55,10 +60,13 @@
             <vee-field
               as="textarea"
               name="comment"
-              class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded mb-4"
+              class="block w-full py-1.5 px-3 text-gray-800 border dark:bg-gray-500 dark:text-white dark:placeholder:text-white dark:border-gray-400 border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded mb-4"
               placeholder="Your comment here..."
             ></vee-field>
-            <ErrorMessage class="text-red-600" name="comment" />
+            <ErrorMessage
+              class="text-red-600 dark:text-red-100"
+              name="comment"
+            />
             <button
               :disabled="comment_in_submission"
               type="submit"
@@ -70,7 +78,7 @@
           <!-- Sort Comments -->
           <select
             v-model="sort"
-            class="block mt-4 py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+            class="block mt-4 py-1.5 px-3 dark:bg-gray-600 dark:text-white dark:border-gray-400 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
           >
             <option value="1">Latest</option>
             <option value="2">Oldest</option>
@@ -81,7 +89,7 @@
     <!-- Comments -->
     <ul class="container mx-auto">
       <li
-        class="p-6 bg-gray-50 border border-gray-200"
+        class="p-6 bg-gray-50 dark:bg-gray-600 dark:text-white dark:border-gray-400 border border-gray-200"
         v-for="comment in sorted_comments"
         :key="comment.docID"
       >
