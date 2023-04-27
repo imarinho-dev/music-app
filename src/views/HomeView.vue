@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <main>
     <!-- Introduction -->
     <section class="relative py-20 mb-8 text-center text-white">
       <div
